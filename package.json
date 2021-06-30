@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "fast-xml-parser": "^3.19.0",
+    "simple-git": "^2.40.0"
+  }
+}
