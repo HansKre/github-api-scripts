@@ -69,4 +69,26 @@ const createRepos = async () => {
     }
 }
 
-createRepos();
+const repoNames = [
+    'foo',
+    'bar'
+];
+
+const createReposFromArray = async (arr) => {
+    const isError = false;
+    for (const repoName of arr) {
+        if (!isError) {
+            try {
+                console.log('Creating', repoName);
+                await createRepo(repoName);
+                console.log('Successful');
+            } catch (error) {
+                console.log(error)
+                isError = true;
+            }
+        }
+    }
+}
+
+// createRepos();
+createReposFromArray(repoNames);
